@@ -64,7 +64,7 @@ public class Produto {
         try {
             int q = Integer.parseInt(quantidadeNoEstoque);
             if (q < 0) {
-                throw new IllegalArgumentException("A quantidade no estoque deve ser maior que zero");
+                throw new IllegalArgumentException("A quantidade no estoque deve ser um numero inteiro maior que zero");
             } else {
                 this.quantidadeNoEstoque = q;
             }

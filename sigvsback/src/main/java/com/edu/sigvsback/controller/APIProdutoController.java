@@ -54,6 +54,7 @@ public class APIProdutoController {
                 return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Erro não esperado ");
             }
         } catch (Exception e) {
+        	logger.info(">>>>>> api produto controller cadastrar exception =>" + e.getMessage());
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
         }
 
@@ -68,7 +69,9 @@ public class APIProdutoController {
             Produto produto = produtoServico.atualizar(produtoId, produtoAtualizado).get();
             return ResponseEntity.ok(produto);
         } catch (Exception e) {
+        	logger.info(">>>>>> apicontroller atualizar informacoes erro =>" + e.getMessage());
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(e.getMessage());
+            
         }
     }
 
