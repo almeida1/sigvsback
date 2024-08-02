@@ -60,7 +60,9 @@ public class APIProdutoController {
 
     }
 
-    // atualiza informacoes de produto
+   /*
+    * Atualiza as infomacoes de produto recebe como parametro o id e um arquivo json com as informações a serem modificadas
+    */
     @PutMapping("{id}")
     public ResponseEntity<Object> atualizaProduto(@PathVariable("id") Long produtoId,
             @RequestBody Produto produtoAtualizado) {
