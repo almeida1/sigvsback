@@ -11,7 +11,9 @@ import org.springframework.context.annotation.Configuration;
 import com.edu.sigvsback.model.Produto;
 import com.edu.sigvsback.servico.IProdutoRepository;
 
-
+/*
+ * Insere registros no DB na inicialização da aplicacao.
+ */
 @Configuration
 public class LoadDatabase {
 	Logger logger = LogManager.getLogger(this.getClass());
